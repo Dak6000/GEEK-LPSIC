@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Créer un compte</title>
-  <link rel="stylesheet" href="assets/auth.css">
+  <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -12,7 +12,8 @@
   <div class="auth-container">
     <h1>Créer un compte</h1>
     
-    <form class="auth-form">
+    <form class="auth-form" method="POST" action="{{ route('register') }}">
+      @csrf
       <div class="form-group">
         <div class="input-with-icon">
           <span class="material-icons">person</span>
@@ -44,14 +45,14 @@
       <div class="form-group">
         <div class="input-with-icon">
           <span class="material-icons">lock_outline</span>
-          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmer le mot de passe" required>
+          <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirmer le mot de passe" required>
         </div>
       </div>
       
-      <button type="submit" class="auth-btn">Créer un compte</button>
+      <button type="submit" class="auth-btn">Enregistrer</button>
       
       <div class="links">
-        <a href="login.html" class="auth-link">Déjà un compte? Se connecter</a>
+        <a href="{{ route('login') }}" class="auth-link">Déjà un compte? Se connecter</a>
       </div>
     </form>
   </div>

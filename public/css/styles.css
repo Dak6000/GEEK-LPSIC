@@ -1,0 +1,89 @@
+
+:root {
+    --primary: #8C2711;  /* Marron foncé */
+    --secondary: #BF5B21; /* Marron clair */
+    --light: #F8F9FA;    /* Fond clair */
+    --dark: #212529;     /* Texte foncé */
+}
+
+body {
+    background-color: var(--light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rounded-image {
+    border-radius: 50px;
+}
+
+.brand-header {
+    color: var(--primary);
+    text-align: center;
+    padding: 2rem 0 1rem;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.main-title {
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.description {
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+}
+.card-description {
+    color: var(--dark);
+    font-size: 0.9rem;
+}
+@media (max-width: 1200px) {
+    .card {
+        min-width: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+    }
+}

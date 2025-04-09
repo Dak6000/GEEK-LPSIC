@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Se Connecter</title>
-  <link rel="stylesheet" href="assets/auth.css">
+  <link rel="stylesheet" href="{{ asset("css/auth.css") }}">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -12,7 +12,8 @@
   <div class="auth-container">
     <h1>Se Connecter</h1>
     
-    <form class="auth-form">
+    <form class="auth-form" method="POST" action="{{ route('login') }}">
+      @csrf
       <div class="form-group">
         <div class="input-with-icon">
           <span class="material-icons">email</span>
@@ -31,7 +32,7 @@
       
       <div class="links">
         <a href="#" class="auth-link">Mot de passe oublié?</a>
-        <a href="register.html" class="auth-link">Nouveau compte? Créer</a>
+        <a href="{{ route('register') }}" class="auth-link">Nouveau compte? Créer</a>
       </div>
     </form>
   </div>
