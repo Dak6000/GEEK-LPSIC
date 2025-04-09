@@ -11,6 +11,21 @@
 <body class="login-page">
   <div class="auth-container">
     <h1>Se Connecter</h1>
+    @if($errors->any())
+      <div class="alert alert-danger">
+          <ul>
+              @foreach($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+      @endif
+
+      @if(session('status'))
+      <div class="alert alert-success">
+          {{ session('status') }}
+      </div>
+    @endif
     
     <form class="auth-form" method="POST" action="{{ route('login') }}">
       @csrf
