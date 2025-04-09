@@ -22,17 +22,19 @@
               <li class="nav-item">
                 <a class="nav-link active" style="color: #BF5B21; font-size: 17px;" aria-current="page" href="#">Accueil</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" style="color: #BF5B21; font-size: 17px;"  aria-current="page" href="#">Orientation</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #BF5B21; font-size: 17px;" href="#" id="orientationDropdown" role="button" data-bs-toggle="dropdown">
+                  Orientation
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/bac">Après le BAC</a></li>
+                  <li><a class="dropdown-item" href="/licence">Licences</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/metiers">Métiers</a></li>
+                </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" style="color: #BF5B21; font-size: 17px;"  aria-current="page" href="#">Forum</a>
-              </li>
-              <li class="nav-item">
-                
-              </li>
-              <li class="nav-item">
-                
+                <a class="nav-link" style="color: #BF5B21; font-size: 17px;"  aria-current="page" href="#">Contact</a>
               </li>
             </ul>
             <div class="d-flex">
