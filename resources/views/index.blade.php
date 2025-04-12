@@ -193,7 +193,7 @@
             <div class="row">
                 <div class="col-md-3 mb-4">
                     <div class="card h-100 mentor-card text-center">
-                        <img src="{{ asset('images/default-profile.png') }}" 
+                        <img src="{{ asset("images/default-profile.png") }}" 
                              class="card-img-top rounded-circle mx-auto mt-3" 
                              style="width: 100px; height: 100px; object-fit: cover;" 
                              alt="Photo du mentor">
@@ -201,21 +201,26 @@
                             <h5 class="card-title">DAK-SHADOW</h5>
                             <p class="card-text text-muted">Developpeur web et mobile</p>
                             <p class="card-text"><small>2 ans d'experience dans le developpement d'application</small></p>
-                            <a href="#" class="btn" style="background-color: #8C2711; color: #FFFFFF;">Voir profil</a>
+                            <a href="{{ route("mentors") }}#dak-shadow" class="btn" style="background-color: #8C2711; color: #FFFFFF;">Voir profil</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="card h-100 mentor-card text-center">
-                        <img src="{{ asset("images/mentor_1.png") }}" 
+                        <img src="{{ asset('images/mentor_1.png') }}" 
                              class="card-img-top rounded-circle mx-auto mt-3" 
                              style="width: 100px; height: 100px; object-fit: cover;" 
                              alt="Photo du mentor">
                         <div class="card-body">
-                            <h5 class="card-title">DAK-SHADOW</h5>
-                            <p class="card-text text-muted">Developpeur web et mobile</p>
-                            <p class="card-text"><small>2 ans d'experience dans le developpement d'application</small></p>
-                            <a href="#" class="btn" style="background-color: #8C2711; color: #FFFFFF;">Voir profil</a>
+                            <h5 class="card-title">Sophie Martin</h5>
+                            <p class="card-text text-muted">Expert JavaScript/Node.js</p>
+                            <p class="card-text"><small>
+                                5 ans en développement JavaScript
+                                Lead Developer chez TechCorp
+                                Contributrice Open Source
+                                Formatrice certifiée
+                            </small></p>
+                            <a href="{{ route("mentors") }}#mentor-1" class="btn" style="background-color: #8C2711; color: #FFFFFF;">Voir profil</a>
                         </div>
                     </div>
                 </div>
@@ -226,10 +231,10 @@
                              style="width: 100px; height: 100px; object-fit: cover;" 
                              alt="Photo du mentor">
                         <div class="card-body">
-                            <h5 class="card-title">DAK-SHADOW</h5>
-                            <p class="card-text text-muted">Developpeur web et mobile</p>
+                            <h5 class="card-title">Thomas Dupont</h5>
+                            <p class="card-text text-muted">Data Scientist Senior</p>
                             <p class="card-text"><small>2 ans d'experience dans le developpement d'application</small></p>
-                            <a href="#" class="btn" style="background-color: #8C2711; color: #FFFFFF;">Voir profil</a>
+                            <a href="{{ route("mentors") }}#mentor-2" class="btn" style="background-color: #8C2711; color: #FFFFFF;">Voir profil</a>
                         </div>
                     </div>
                 </div>
@@ -240,10 +245,10 @@
                              style="width: 100px; height: 100px; object-fit: cover;" 
                              alt="Photo du mentor">
                         <div class="card-body">
-                            <h5 class="card-title">DAK-SHADOW</h5>
-                            <p class="card-text text-muted">Developpeur web et mobile</p>
+                            <h5 class="card-title">Émilie Rousseau</h5>
+                            <p class="card-text text-muted">Développeuse Mobile Senior</p>
                             <p class="card-text"><small>2 ans d'experience dans le developpement d'application</small></p>
-                            <a href="#" class="btn" style="background-color: #8C2711; color: #FFFFFF;">Voir profil</a>
+                            <a href="{{ route("mentors") }}#mentor-3" class="btn" style="background-color: #8C2711; color: #FFFFFF;">Voir profil</a>
                         </div>
                     </div>
                 </div>
@@ -286,7 +291,7 @@
             <div class="quiz-card">
                 <h2>Vous ne savez pas par où commencer ?</h2>
                 <p>Notre quiz d'orientation vous propose des pistes personnalisées en 5 minutes</p>
-                <a href="#}" class="quiz-button">Faire le test <i class="fas fa-arrow-right"></i></a>
+                <a href="{{ route("quiz") }}" class="quiz-button">Faire le test <i class="fas fa-arrow-right"></i></a>
             </div>
         </section>
     @else

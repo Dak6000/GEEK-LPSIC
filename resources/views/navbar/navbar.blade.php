@@ -48,12 +48,12 @@
 
                     <!-- Menu Quiz (visible seulement quand connecté) -->
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #BF5B21; font-size: 17px;" aria-current="page" href="#">Quiz</a>
+                        <a class="nav-link" style="color: #BF5B21; font-size: 17px;" aria-current="page" href="{{ route("quiz") }}">Quiz</a>
                     </li>
 
                     <!-- Nouveau menu Cours -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" style="color: #BF5B21; font-size: 17px;" href="#" id="coursDropdown" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: #BF5B21; font-size: 17px;" href="{{ route("cours") }}" id="coursDropdown" role="button" data-bs-toggle="dropdown">
                             Cours
                         </a>
                         <ul class="dropdown-menu">
@@ -70,9 +70,9 @@
                             Mentor
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Trouver un mentor</a></li>
-                            <li><a class="dropdown-item" href="#">Devenir mentor</a></li>
-                            <li><a class="dropdown-item" href="#">Mes mentors</a></li>
+                            <li><a class="dropdown-item" href="{{ route("mentors") }}">Trouver un mentor</a></li>
+                            <li><a class="dropdown-item" href="{{ route("mentors") }}">Devenir mentor</a></li>
+                            <li><a class="dropdown-item" href="{{ route("mentors") }}">Mes mentors</a></li>
                         </ul>
                     </li>
                 @endauth

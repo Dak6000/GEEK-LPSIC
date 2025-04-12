@@ -28,6 +28,14 @@ Route::get("/cours", function () {
     return view("cours");
 })->name("cours");
 
+Route::get("/mentors", function () {
+    return view("mentors");
+})->name("mentors");
+
+Route::get("quiz", function () {
+    return view("quiz");
+})->name("quiz");
+
 // Routes d'authentification
 Route::middleware('guest')->group(function () {
     // Login
