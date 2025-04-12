@@ -20,6 +20,14 @@ Route::get('/', function () {
     return view('index');
 })->name("index");
 
+Route::get('/details', function () {
+    return view('details');
+})->name("details");
+
+Route::get("/cours", function () {
+    return view("cours");
+})->name("cours");
+
 // Routes d'authentification
 Route::middleware('guest')->group(function () {
     // Login
