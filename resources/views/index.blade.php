@@ -300,8 +300,8 @@
                 <h2>Connectez-vous pour accéder à plus de fonctionnalités</h2>
                 <p>Créez un compte pour bénéficier de notre quiz d'orientation et de conseils personnalisés</p>
                 <div class="d-flex gap-3 justify-content-center">
-                    <a href="{{ route('login') }}" class="btn btn-primary">Se connecter</a>
-                    <a href="{{ route('register') }}" class="btn btn-outline-primary">S'inscrire</a>
+                    <a href="{{ route('login') }}" class="btn m-2" style="color: #FFFFFF">Se connecter</a>
+                    <a href="{{ route('register') }}" class="btn m-2" style="background-color: #8C2711; color: #FFFFFF;">S'inscrire</a>
                 </div>
             </div>
         </section>

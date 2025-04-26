@@ -11,7 +11,7 @@
             <h2 class="level-title" style="color: #BF5B21">
                 <i class="fas fa-graduation-cap me-2"></i>Niveau BEPC
             </h2>
-            <a href="#" class="btn btn-sm" style="background-color: #8C2711; color: #FFFFFF;">Voir tout</a>
+            <a href="{{ route('quiz') }}" class="btn btn-sm" style="background-color: #8C2711; color: #FFFFFF;">Passer le quiz</a>
         </div>
         
         <div class="row">

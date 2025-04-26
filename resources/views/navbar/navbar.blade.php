@@ -28,6 +28,12 @@
                     <a class="nav-link active" style="color: #BF5B21; font-size: 17px;" aria-current="page" href="{{ route('index') }}">Accueil</a>
                 </li>
                 
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #BF5B21; font-size: 17px;" href="{{ route('contact') }}">
+                        <i class="fas fa-headset me-1"></i> Support
+                    </a>
+                </li>
+                
                 @auth
                     <!-- Menu Orientation (visible seulement quand connecté) -->
                     <li class="nav-item dropdown">
@@ -47,8 +53,19 @@
                     </li>
 
                     <!-- Menu Quiz (visible seulement quand connecté) -->
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: #BF5B21; font-size: 17px;" aria-current="page" href="{{ route("quiz") }}">Quiz</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: #BF5B21; font-size: 17px;" href="#" id="quizDropdown" role="button" data-bs-toggle="dropdown">
+                            Quiz
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('quiz.bepc') }}">Quiz BEPC</a></li>
+                            <li><a class="dropdown-item" href="#">Quiz BAC</a></li>
+                            <li><a class="dropdown-item" href="#">Quiz BTS</a></li>
+                            <li><a class="dropdown-item" href="#">Quiz Licence</a></li>
+                            <li><a class="dropdown-item" href="#">Quiz Master</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ route('quiz') }}">Quiz</a></li>
+                        </ul>
                     </li>
 
                     <!-- Nouveau menu Cours -->
@@ -60,7 +77,7 @@
                             <li><a class="dropdown-item" href="{{ route("cours") }}">Tous les cours</a></li>
                             <li><a class="dropdown-item" href="{{ route("cours") }}">Mes cours</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{ route("cours") }}">Proposer un cours</a></li>
+                            <li><a class="dropdown-item" href="{{ route("course.create") }}">Proposer un cours</a></li>
                         </ul>
                     </li>
 
@@ -71,9 +88,12 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route("mentors") }}">Trouver un mentor</a></li>
-                            <li><a class="dropdown-item" href="{{ route("mentors") }}">Devenir mentor</a></li>
+                            <li><a class="dropdown-item" href="{{ route("mentor.create") }}">Devenir mentor</a></li>
                             <li><a class="dropdown-item" href="{{ route("mentors") }}">Mes mentors</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="nav-link" style="color: #BF5B21; font-size: 17px;" href="{{ route('certifications.index') }}">Certifications</a>
                     </li>
                 @endauth
             </ul>
